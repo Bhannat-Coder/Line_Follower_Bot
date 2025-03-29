@@ -182,3 +182,15 @@ This Project is a very interesting project where one can learn many different th
 [https://www.ni.com/en/shop/labview/pid-theory-explained.html#:~:text=As%20the%20name%20suggests%2C%20PID,are%20discussed%20in%20this%20paper](https://www.ni.com/en/shop/labview/pid-theory-explained.html#:~:text=As%20the%20name%20suggests%2C%20PID,are%20discussed%20in%20this%20paper)
 [https://www.linkedin.com/pulse/crucial-role-pid-control-line-follower-robots-kiruthika-r-zakwc/](https://www.linkedin.com/pulse/crucial-role-pid-control-line-follower-robots-kiruthika-r-zakwc/)
 [https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/#:~:text=The%20L298N%20is%20a%20dual,and%20explain%20how%20it%20works](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/#:~:text=The%20L298N%20is%20a%20dual,and%20explain%20how%20it%20works.)
+
+# Members #
+- Dr. Subhankar Mishra (Faculty incharge of RoboTech club) - Guidance for the Project
+- Dadhichi Das (President of RoboTech Club) -Mentor of Whole Project, Bug Fixing
+- Girija Sankar Roy (Senior) -Mentor, Bug Fixing
+- Rikan Mahakur (Senior) -Mentor of Mechanical work
+- Abhijeet Parida (Captain) -Coding work for project, Bug fixing
+- Mayukh Mukherjee -Designing work for project
+- Promit Ghosh -Designing and circuiting work for project
+- Soumalya Naskar -Mechanical work for project
+- Archisman Mukherjee -Coding work for project
+- Mohit Kumar Pati -Mechanical and Coding work for project.
