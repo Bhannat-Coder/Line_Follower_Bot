@@ -54,4 +54,40 @@ Steering = Kp × e + Kd × ( ecurrent - eprevious ) + Ki × eSummation of all er
 
 <img src="https://github.com/DibboBhai/Line_Follower_Robot/assets/148962484/709b36f0-d8f0-42db-97cd-da279d3747f4" width="800" height="500">
 
+## Giving Output ##
+After doing all the calculations in Arduino by using the PID concept the motordriver give output of how much electricity is to be supplied to the motor driver and then that cause speed variation in wheels and thus cause steering.
 
+# Equipments Used : #
+Acquired Components from RTC
+- 1.Acrylic Pieces,Acrylic Chassis
+- 2.Jumper Wires
+- 3.LiPo Battery*2(3200 mAh,2800mAh)
+- 4.AC to DC Converter *2
+- 5.Breadboard*2
+- 6.Black Red Wires*1
+- 7.Screw Driver Set/Case*1
+- 8.Multi IR Sensor*1
+- 9.Single IR Sensor *1
+- 10.USB to MicroUSB A for Arduino Nano*1
+- 11.Arduino Nano *2
+- 12.Omni Wheel *2
+- 13.A4988 Motor Driver *3
+- 14. SPST Switch *1
+- 15. Clamp for N20 motor*1
+- 16. Battery Charger*1
+- 17.Jumper Wire Box *1
+- 18.Multimeter *1
+- 19.Soldering Machine*1
+- 20.Desolder *1
+- 21.L298N motor Driver*1
+- 22.TT motors*13
+- 23.Wire Cutter*1
+- 24.Screw*10
+- 25.10 m wire *1
+- 26.Big Wheels*6
+- 27.Adhesive Tape*1
+
+# System Architecture #
+We decided to put IR sensors at the front most part of the carso that blackline can be detected the most. The battery suppliest power to every sesor, motors driver and arduino at the back. The battery was connected to the Motor Driver which gives 12 V. The 5 V output of Motor Drover is connected to the breadboard and it gives power supply to Arduino and Sensors. There is a connection of jumper wires with the sensor to the arduino for input of digital data. Then the Arduino is connected to INPUT PINS of Motor Driver. Then the OUTPUT PINS of the Motor Driver are connected to the motors which has wheels mounted to it.
+
+# Mechanical Desingn : #
