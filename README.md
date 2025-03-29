@@ -95,3 +95,90 @@ The 2D design is created in Onshape and then we used Laser cutter to get precise
 
 ![](https://github.com/Bhannat-Coder/Line_Follower_Bot/blob/main/Screenshot%202025-03-29%20215043.png)
 
+# Electrical Connections #
+|Arduino with Sensors|	|Arduino with Motor Driver|	Battery to Motor Driver|	|Motor Driver to rest of Circuit|
+|A0 with D1|	|Pin 5 with EN A|	|Positive terminal to 12 V|	|Positive terminal of 5 V to Breadboard|
+|A1 with D2|	|Pin 3 with EN B|	|Negative terminal to ground of breadboard|	|Arduino positive to Common 5 V positive|
+|A2 with D4|	|Pin 2 with IN 1|	||	|Sensor positive to Common 5 V positive|
+|A3 with D5|	|Pin 4 with IN 2|	||	|Ground to Common Ground Breadboard|
+|A4 with D6|	|Pin 7 with IN 3|	||	|Ground of Arduino to Common ground of breadboard|
+|| |Pin 8 with IN 4|	||	|Ground of Sensor to Common ground of breadboard|
+
+# Sensor Setup : #
+The sensors has two different typr of pins D and A. D are for the DIGITAL INPUT and A are for ANALOG INPUT. In our case we will use Digital pins because the detection of the black line must be very sure event so we take only two inputs either the black line is detected or not. If the black line is detected then the output is 1 and 0 when there is no detection.
+
+Explanation of how the specific sensor works.
+
+- D1 is the left-most IR sensor
+- D2 is the left-middle IR sensor
+- D4 is the centre IR sensor
+- D5 is the right-middle IR sensor
+- D6 is the right-most IR sensor
+
+<img src ="https://github.com/DibboBhai/Line_Follower_Robot/assets/148962484/fe04c8d3-7943-44f5-8a1d-4301e78b57e4" width="800" height="300">
+
+# Motor Control : #
+The EN pins helps in the voltage being supplied to the motors and the IN pins helps in finding the direction of the movement and helps in changing the direction of electric current which results in control of direction of motion of bot. EN pins can handle analog input but for IN pins it is advisable not to use analog inputs.
+
+<img src="https://github.com/DibboBhai/Line_Follower_Robot/assets/148962484/fd91943c-bb46-4eff-88ba-32a3cc285075" width = 300 height = 300>
+
+For the directions
+
+- IN1 is always positive
+- IN2 is always negative
+- IN3 is always negative
+- IN4 is always positive
+For the output in Motors
+
+- OUT1 will have positive terminal and OUT2 will be negative terminal.
+- OUT3 will have negative terminal and OUT4 will be positive terminal.
+
+# Programming #
+## Initializing Pins and Other Variables : ##
+- At the staring we define the input and output pins
+- After that we define whit and blak for conveinence of the input readings
+- Intialize that by default the very initial reading is white everywhere
+- At end for using PID define kp, kd and ki
+- er is the error, per is the previous error and I is the integral error
+- At the very end we put adj variable which steers the bot
+After that we setup the code according to the connections
+
+## move() function : ##
+- We define a function move() which has 4 input variables taken from user which gives direction to the IN pins and tells which defines the rotation's direction.
+
+This function is for convenience of the user for defining direction if there is any problem in wiring or interchange of wiring the user can easily just change the code rather than meticulously fixing the wiring.
+
+## read() function : ##
+- This functions help in reading the output given by the sensor after checking for the black line.
+- This function is a digital read function so output is 1 or 0 only
+
+## check() function : ##
+- The check functions help in checking of the output given by read() function.
+- After evaluating the ouput it look after the condition given in code and assign an error value.
+
+## Set_Speed() function : ##
+- This function gives an analog output to the EN pins.
+After evaluating function then we first use read() function to get the input. AFter that we issue the value of per = er. Which assigns per the value of the previous reading. Then we use check() function which checks all the output given by read() function and check() function assigns a value to er. Then we use variable I and I changes because all the errors adds up to I. Then value of adj is assigned which steers the car according to the er, per and I value by putting it in PID concept's equation. At the very end we use set_speed() function to set the speed and use add and subtract adj to steer the car. We put move() function at the end so that we can use it to control direction.
+
+# Testing and Caliberation : #
+Now the bot is ready to be tested in a white flex floor and black tape can be used for initial testing. We tested many times by modifying the path. After testing we change the value of Kp, Kd and Ki according to the experimentation. The Value of k<sub>i</sub> was kept zero during entire testing. It is recomended to keep Kp value highest, Kd medium and Ki having value as 0. We tested the bot before the start of the competition as well to make sure everything going good. The best value of PID variables are found after a lot of experimentation and those variables are best for the bot having same dimension. We Set k<sub>p</sub> = 500 and k<sub>d</sub>=30.
+
+# Performance Evaluation : #
+Perfomrance evaluation is done by checking the speed and accuracy of the bot. It is also tested by how it detects and follows the sharp edges and at how much precision it turns without loosing the track of the line. Ans lastly how easily the biasing is done according to different tracks. At first the bot was behaving abnormally by not following the black line and moving in a circle , We found some error in caliberation of the IR sensors due to which the abnormality was occuring.
+
+# Future Improvements : #
+There are many scope for future improvement of our bots: 
+- minimizing the size of the bot for more accurate turns
+- using small sized battery to reduce the weight
+- use of wheels of slightly bigger diameter for increased speed and smoother movement.
+- making the design of bot curved for improved stability , reduced drag and for more efficient turning and navigation.
+- use of individual sensors in place of using sensor board.
+
+# Conclusion : #
+This Project is a very interesting project where one can learn many different things, one can understand application of PID theory in development in self driving cars. This Project ignites the interest of a person in autonomous objects and how to develop. One also learns the basic stuffs like soldering, circuit designing, calibration and programming. We prefered using arduino nano instead of arduino uno due to its small size and breadboard friendly design.
+
+# References : #
+[](https://circuitdigest.com/microcontroller-projects/interfacing-ir-sensor-module-with-arduino)
+[](https://www.ni.com/en/shop/labview/pid-theory-explained.html#:~:text=As%20the%20name%20suggests%2C%20PID,are%20discussed%20in%20this%20paper)
+[](https://www.linkedin.com/pulse/crucial-role-pid-control-line-follower-robots-kiruthika-r-zakwc/)
+[](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/#:~:text=The%20L298N%20is%20a%20dual,and%20explain%20how%20it%20works.)
