@@ -34,7 +34,7 @@ PID algorithm consists of three basic coefficients; proportional, integral and d
 Whenever the robot got away from the black line we assigned an error number to it. The more the robot is away from the black line to the centre IR sesor the more will be th error. The rate of turning of the bot depend on the distance it is away from the centre. Therefore, the amount of turning required for turning of the bot is directly proportional to the error.
 
 There are 3 components in PID
-## Proportional(k<sub>p</sub> :  ##
+## Proportional(k<sub>p</sub>) :  ##
 The proportional component of PID control is responsible for correcting the robot's position based on the current error. In the case of a line follower robot, the error is the deviation of the robot from the desired path. The Kp term contributes to the correction by adjusting the robot's speed proportionally to the error. This ensures that the robot makes prompt and proportional adjustments, minimizing overshooting and oscillations.
 
 - Steering depends on Kp × e
