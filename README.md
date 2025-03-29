@@ -21,3 +21,37 @@ We take the input using our 6 IR sensor device :
 - 1 means detection of black line and 0 means white area detected
 - We define a function called read() in Arduino which digitalRead all the pins
 
+# Proportional Derivative Integral controller algorithm (PID algorithm) #
+PID algorithm consists of three basic coefficients; proportional, integral and derivative which are varied to get optimal response and helps in stablility of the bot and for faster response. And there are many reasons of using the concept of PID in line follower robot.
+
+- Precision Navigation
+- Adaptability to Varied Conditions
+- Minimization of Errors
+- Enhanced Stability
+- Efficient Response to Disturbances
+
+## Concept of e ##
+Whenever the robot got away from the black line we assigned an error number to it. The more the robot is away from the black line to the centre IR sesor the more will be th error. The rate of turning of the bot depend on the distance it is away from the centre. Therefore, the amount of turning required for turning of the bot is directly proportional to the error.
+
+There are 3 components in PID
+## Proportional(k<sub>p</sub> :  ##
+The proportional component of PID control is responsible for correcting the robot's position based on the current error. In the case of a line follower robot, the error is the deviation of the robot from the desired path. The Kp term contributes to the correction by adjusting the robot's speed proportionally to the error. This ensures that the robot makes prompt and proportional adjustments, minimizing overshooting and oscillations.
+
+- Steering depends on Kp × e
+
+## Derivative(k<sub>d</sub>) : ##
+The derivative component anticipates future errors by evaluating the rate of change of the error. It plays a crucial role in damping oscillations and preventing overshooting. In the context of line follower robots, the D term helps in smoothing out abrupt changes in direction, contributing to a more stable and controlled movement.
+
+- Steering depends on Kd × ( ecurrent - eprevious )
+
+## Integral(k<sub>d</sub>) : ##
+The integral component addresses the cumulative error over time. It is particularly valuable in scenarios where a steady-state error may persist. For line follower robots, this could be caused by external disturbances or variations in surface color. The I term helps in eliminating such persistent errors by integrating the accumulated error over time, thereby enhancing the accuracy of the robot's navigation.
+
+- Steering depends on Ki × eSummation of all errors
+- Overall Steering of the bot,
+
+Steering = Kp × e + Kd × ( ecurrent - eprevious ) + Ki × eSummation of all errors
+
+<img src="https://github.com/DibboBhai/Line_Follower_Robot/assets/148962484/709b36f0-d8f0-42db-97cd-da279d3747f4" width="800" height="500">
+
+
