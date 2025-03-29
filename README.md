@@ -178,7 +178,7 @@ There are many scope for future improvement of our bots:
 This Project is a very interesting project where one can learn many different things, one can understand application of PID theory in development in self driving cars. This Project ignites the interest of a person in autonomous objects and how to develop. One also learns the basic stuffs like soldering, circuit designing, calibration and programming. We prefered using arduino nano instead of arduino uno due to its small size and breadboard friendly design.
 
 # References : #
-![](https://circuitdigest.com/microcontroller-projects/interfacing-ir-sensor-module-with-arduino)
-![](https://www.ni.com/en/shop/labview/pid-theory-explained.html#:~:text=As%20the%20name%20suggests%2C%20PID,are%20discussed%20in%20this%20paper)
-![](https://www.linkedin.com/pulse/crucial-role-pid-control-line-follower-robots-kiruthika-r-zakwc/)
-![](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/#:~:text=The%20L298N%20is%20a%20dual,and%20explain%20how%20it%20works.)
+[https://circuitdigest.com/microcontroller-projects/interfacing-ir-sensor-module-with-arduino](https://circuitdigest.com/microcontroller-projects/interfacing-ir-sensor-module-with-arduino)
+[https://www.ni.com/en/shop/labview/pid-theory-explained.html#:~:text=As%20the%20name%20suggests%2C%20PID,are%20discussed%20in%20this%20paper](https://www.ni.com/en/shop/labview/pid-theory-explained.html#:~:text=As%20the%20name%20suggests%2C%20PID,are%20discussed%20in%20this%20paper)
+[https://www.linkedin.com/pulse/crucial-role-pid-control-line-follower-robots-kiruthika-r-zakwc/](https://www.linkedin.com/pulse/crucial-role-pid-control-line-follower-robots-kiruthika-r-zakwc/)
+[https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/#:~:text=The%20L298N%20is%20a%20dual,and%20explain%20how%20it%20works](https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/#:~:text=The%20L298N%20is%20a%20dual,and%20explain%20how%20it%20works.)
