@@ -44,7 +44,7 @@ The derivative component anticipates future errors by evaluating the rate of cha
 
 - Steering depends on Kd × ( ecurrent - eprevious )
 
-## Integral(k<sub>d</sub>) : ##
+## Integral(k<sub>i</sub>) : ##
 The integral component addresses the cumulative error over time. It is particularly valuable in scenarios where a steady-state error may persist. For line follower robots, this could be caused by external disturbances or variations in surface color. The I term helps in eliminating such persistent errors by integrating the accumulated error over time, thereby enhancing the accuracy of the robot's navigation.
 
 - Steering depends on Ki × eSummation of all errors
