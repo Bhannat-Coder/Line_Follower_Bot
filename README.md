@@ -93,4 +93,5 @@ We decided to put IR sensors at the front most part of the carso that blackline 
 # Mechanical Desingn : #
 The 2D design is created in Onshape and then we used Laser cutter to get precise design in the Acrylic. Then we created another floor for keepig arduino in that floor and battery below and the above floor also had the switch. In the moddle there was Motor Driver and just ahead of it had the breadboard. At the front end the sensor was present.
 
+[](https://github.com/Bhannat-Coder/Line_Follower_Bot/blob/main/Screenshot%202025-03-29%20215043.png)
 
